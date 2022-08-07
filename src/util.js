@@ -23,7 +23,7 @@ const casesTypeColors = {
     },
 };
 
-export const sortData = (data) => {
+export const sortData = ((data) => {
     let sortedData = [...data];
     sortedData.sort((a,b)) => {
      if(a.cases > b.cases) {
