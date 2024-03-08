@@ -1,20 +1,27 @@
 import React from "react";
-import './Map.css';
-import { MapContainer as Leaflet, TileLayer } from "react-leaflet";
+import { MapContainer as LeafletMap, TileLayer } from "react-leaflet";
+import "./Map.css";
 import { showDataOnMap } from "./util";
 
 function Map({ countries, casesType, center, zoom }) {
   return (
     <div className="map">
+<<<<<<< Updated upstream
       <Leaflet center={center} zoom={zoom}>
         <TileLayer 
          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+=======
+      <LeafletMap center={center} zoom={zoom}>
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+>>>>>>> Stashed changes
         />
-      {showDataOnMap(countries, casesType)}
-      </Leaflet>
+        {showDataOnMap(countries, casesType)}
+      </LeafletMap>
     </div>
   );
-  }
+}
 
 export default Map;
